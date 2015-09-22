@@ -28,9 +28,13 @@ public class IO
 		
 	}
 	
-	public void displayProgramTermination()
+	public void displayProgramTermination() throws IOException
 	{
 		System.out.println("(HALT)");
+		if (false)
+		{
+			throw new IOException();
+		}
 	}
 
 	public int read() throws IOException

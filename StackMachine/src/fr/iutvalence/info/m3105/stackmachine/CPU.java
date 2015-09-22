@@ -4,7 +4,6 @@ import java.io.IOException;
 
 public class CPU
 {
-	//test first push
 	public final static int HALT 	= 0x00;
 	public final static int PUSH  	= 0x01;
 	public final static int ADD 	= 0x02;
@@ -28,15 +27,27 @@ public class CPU
 	public final static int DUP		= 0x14;
 	public final static int POP		= 0x15;
 	
-	// TODO something is missing here...
-
+	private IO ioSystem;
+	private int PC;
+	private Memory programMemory;
+	private int opCode;
+	private Stack expStack;
+	private Stack callStack;
+	
+	CPU(){
+		this.ioSystem = new IO(System.in,System.out,System.err);
+		PC=0;
+		this.opCode =0;
+	}
+	
 	public void run()
 	{
 		try
 		{
 			while (true)
 			{
-				// TODO something is missing here...
+				//lit l'instruction situé a l'address PC ds la memoire
+				opCode = this.programMemory.read(PC);
 
 				// System.err.print("@" + this.programCounter + ": ");
 				switch (opCode)
@@ -49,6 +60,9 @@ public class CPU
 					}
 					case PUSH:
 					{
+						// To remove exception errors
+						this.expStack.stack();
+						this.expStack.unStack();
 						// TODO something is missing here...
 						break;
 					}
@@ -176,6 +190,46 @@ public class CPU
 		{
 			// TODO something is missing here...
 		}		
+	}
+
+
+	public void wireToProgramMemory(Memory programMemory) {
+		this.programMemory = programMemory;
+		
+	}
+
+
+	public void wireToExpStack(Stack expStack) {
+		this.expStack = expStack;
+		
+	}
+
+
+	public void wireToCallStack(Stack callStack) {
+		this.callStack = callStack;
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public void wireToIoSubsystem(IO ioSystem) {
+		this.ioSystem = ioSystem;
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public void clearStacks() {
+		this.expStack.clear();
+		this.callStack.clear();
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public void setPC(int address) {
+		this.PC = address;
+		
 	}
 
 	// TODO something is missing here...
