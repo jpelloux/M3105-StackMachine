@@ -7,6 +7,9 @@ package fr.iutvalence.info.m3105.stackmachine;
  */
 public class Memory {
 
+	private int startAdress;
+	private int endAdress;
+
 	/**
 	 * Constructor
 	 * @param startAdresse int
@@ -15,16 +18,27 @@ public class Memory {
 	 */
 	Memory(int startAdresse, int endAdresse ) throws InvalidParametersException 
 	{
+		this.startAdress=startAdresse;
+		this.endAdress=endAdresse;
 		if (false)
 		{
 			throw new InvalidParametersException();
 		}
 	}
 
-	public int getStartAddress() {
-		// TODO Auto-generated method stub
-		return 0;
+
+	public void setStartAdresse(int startAdresse) {
+		this.startAdress = startAdresse;
 	}
+
+	public int getEndAdresse() {
+		return endAdress;
+	}
+
+	public void setEndAdresse(int endAdresse) {
+		this.endAdress = endAdresse;
+	}
+
 
 	public void write(int currentAddress, Object opCode) {
 		// TODO Auto-generated method stub
@@ -37,6 +51,11 @@ public class Memory {
 		{
 			throw new AddressOutOfBoundsException();
 		}
+		return 0;
+	}
+
+	public int getStartAddress() {
+		// TODO Auto-generated method stub
 		return 0;
 	}
 

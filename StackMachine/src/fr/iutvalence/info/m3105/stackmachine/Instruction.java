@@ -9,12 +9,18 @@ public class Instruction {
 	
 	private int codeOp;
 	private int address;
+	private int[] params;
 	/**
 	 * Constructor
 	 * @param codeOp int
 	 * @param address int[]
 	 */
 	Instruction(int codeOp,int[] address)
+	{
+		// TODO stuff
+	}
+	
+	Instruction(int codeOp,int[] address,int[]params)
 	{
 		// TODO stuff
 	}
