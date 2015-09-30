@@ -1,0 +1,11 @@
+class Instruction
+!!!129150.java!!!	Instruction(in codeOp : int, inout address : int)
+		// TODO stuff
+!!!129278.java!!!	Instruction(in codeOp : int, inout address : int, inout params : int)
+		// TODO stuff
+!!!129406.java!!!	getOpCode() : int
+		// TODO Auto-generated method stub
+		return 0;
+!!!129534.java!!!	getParams() : int
+		// TODO Auto-generated method stub
+		return null;

@@ -1,0 +1,18 @@
+class Stack
+!!!132094.java!!!	Stack(in size : int)
+		
+!!!132222.java!!!	stack() : void
+		if(false)
+		{
+			throw new StackOverflowException();
+		}
+!!!132350.java!!!	clear() : void
+		// TODO Auto-generated method stub
+		
+!!!132478.java!!!	unStack() : void
+		// TODO Auto-generated method stub
+		if(false)
+		{
+			throw new StackUnderflowException();
+		}
+		

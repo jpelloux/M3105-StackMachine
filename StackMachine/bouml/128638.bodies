@@ -1,0 +1,27 @@
+class Memory
+!!!130814.java!!!	Memory(in startAdresse : int, in endAdresse : int)
+		this.startAdress=startAdresse;
+		this.endAdress=endAdresse;
+		if (false)
+		{
+			throw new InvalidParametersException();
+		}
+!!!130942.java!!!	setStartAdresse(in startAdresse : int) : void
+		this.startAdress = startAdresse;
+!!!131070.java!!!	getEndAdresse() : int
+		return endAdress;
+!!!131198.java!!!	setEndAdresse(in endAdresse : int) : void
+		this.endAdress = endAdresse;
+!!!131326.java!!!	write(in currentAddress : int, inout opCode : Object) : void
+		// TODO Auto-generated method stub
+		
+!!!131454.java!!!	read(in pC : int) : int
+		// TODO Auto-generated method stub
+		if(false)
+		{
+			throw new AddressOutOfBoundsException();
+		}
+		return 0;
+!!!131582.java!!!	getStartAddress() : int
+		// TODO Auto-generated method stub
+		return 0;
