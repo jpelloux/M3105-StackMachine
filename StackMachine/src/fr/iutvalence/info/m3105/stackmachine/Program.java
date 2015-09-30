@@ -6,24 +6,22 @@ package fr.iutvalence.info.m3105.stackmachine;
  *
  */
 public class Program {
-	
+	Instruction[] insctructions;
 	/**
 	 * Constructor
 	 * @param instructions Instruction[]
 	 */
 	Program(Instruction[] instructions)
 	{
-		// TODO stuff
+		this.insctructions=instructions;
 	}
 
 	public int getInstructionCount() {
-		// TODO Auto-generated method stub
-		return 0;
+		return this.insctructions.length;
 	}
 
 	public Instruction getInstructionAt(int instructionNumber) {
-		// TODO Auto-generated method stub
-		return null;
+		return this.insctructions[instructionNumber];
 	}
 
 }

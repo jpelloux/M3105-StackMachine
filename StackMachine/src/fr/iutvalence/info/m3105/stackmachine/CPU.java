@@ -2,7 +2,7 @@ package fr.iutvalence.info.m3105.stackmachine;
 
 import java.io.IOException;
 
-public class CPU
+public class CPU implements CPUInterface
 {
 	public final static int HALT 	= 0x00;
 	public final static int PUSH  	= 0x01;
@@ -29,10 +29,12 @@ public class CPU
 	
 	private IO ioSystem;
 	private int PC;
-	private Memory programMemory;
+	private Memory32 programMemory;
 	private int opCode;
 	private Stack expStack;
 	private Stack callStack;
+	
+	private int value; //mot de 32bits
 	
 	CPU(){
 		this.ioSystem = new IO(System.in,System.out,System.err);
@@ -61,7 +63,7 @@ public class CPU
 					case PUSH:
 					{
 						// To remove exception errors
-						this.expStack.stack();
+						this.expStack.stack(value);
 						this.expStack.unStack();
 						// TODO something is missing here...
 						break;
@@ -193,9 +195,8 @@ public class CPU
 	}
 
 
-	public void wireToProgramMemory(Memory programMemory) {
+	public void wireToProgramMemory(Memory32 programMemory) {
 		this.programMemory = programMemory;
-		
 	}
 
 
@@ -229,7 +230,6 @@ public class CPU
 
 	public void setPC(int address) {
 		this.PC = address;
-		
 	}
 
 	// TODO something is missing here...

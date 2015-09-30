@@ -5,7 +5,7 @@ package fr.iutvalence.info.m3105.stackmachine;
  * @author pellouju & cearda
  *
  */
-public class Memory {
+public class Memory32 implements MemoryInterface{
 
 	private int startAdress;
 	private int endAdress;
@@ -16,7 +16,7 @@ public class Memory {
 	 * @param endAdresse int
 	 * @throws InvalidParametersException never catched
 	 */
-	Memory(int startAdresse, int endAdresse ) throws InvalidParametersException 
+	Memory32(int startAdresse, int endAdresse ) throws InvalidParametersException 
 	{
 		this.startAdress=startAdresse;
 		this.endAdress=endAdresse;
@@ -25,7 +25,6 @@ public class Memory {
 			throw new InvalidParametersException();
 		}
 	}
-
 
 	public void setStartAdresse(int startAdresse) {
 		this.startAdress = startAdresse;
@@ -59,8 +58,4 @@ public class Memory {
 		return 0;
 	}
 
-
-	
-	
-	
 }
