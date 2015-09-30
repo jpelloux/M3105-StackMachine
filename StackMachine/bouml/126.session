@@ -1,7 +1,7 @@
 window_sizes 1280 962 300 900 682 82
 diagrams
   active  classdiagram_ref 128126 // tp1
-    974 804 100 4 0 0
+    974 804 90 4 0 0
 end
 show_stereotypes
 selected classrelation_ref 129022 // programMemory (<unidirectional association>)

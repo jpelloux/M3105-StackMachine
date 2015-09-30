@@ -49,10 +49,10 @@ public class MachineLauncher
 				};
 		Program program = new Program(instructions);
 		
-		Memory32 programMemory= null;
+		MemoryInterface programMemory= null;
 		
-		Stack expStack = null;
-		Stack callStack = null;
+		StackInterface expStack = null;
+		StackInterface callStack = null;
 
 		try
 		{
@@ -66,7 +66,7 @@ public class MachineLauncher
 		}
 		
 		IO ioSystem = new IO(System.in, System.out, System.err);
-		CPU cpu = new CPU();
+		CPUInterface cpu = new CPU();
 		Machine machine = new Machine(cpu, programMemory, expStack, callStack, ioSystem );
 		try
 		{

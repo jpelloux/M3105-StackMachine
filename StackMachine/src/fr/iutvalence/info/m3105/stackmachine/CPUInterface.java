@@ -4,13 +4,13 @@ public interface CPUInterface {
 	
 	public void run();
 
-	public void wireToProgramMemory(Memory32 programMemory);
+	public void wireToProgramMemory(MemoryInterface  programMemory);
 
-	public void wireToExpStack(Stack expStack);
+	public void wireToExpStack(StackInterface expStack);
 
-	public void wireToCallStack(Stack callStack);
+	public void wireToCallStack(StackInterface callStack);
 
-	public void wireToIoSubsystem(IO ioSystem);
+	public void wireToIoSubsystem(IOInterface ioSystem);
 
 	public void clearStacks();
 

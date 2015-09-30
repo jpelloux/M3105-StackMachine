@@ -2,10 +2,10 @@ package fr.iutvalence.info.m3105.stackmachine;
 
 public class Machine
 {
-	private CPU cpu;
-	private Memory32 programMemory;
+	private CPUInterface cpu;
+	private MemoryInterface programMemory;
 
-	public Machine(CPU cpu, Memory32 programMemory, Stack expStack, Stack callStack, IO ioSystem)
+	public Machine(CPUInterface cpu, MemoryInterface programMemory, StackInterface expStack, StackInterface callStack, IOInterface ioSystem)
 	{
 		super();
 		this.cpu = cpu;

@@ -5,6 +5,8 @@ package fr.iutvalence.info.m3105.stackmachine;
  * @author pellouju & cearda
  *
  */
+
+//FAIRE UN TRUC GENERIQUE  ie AVEC <>
 public class Memory32 implements MemoryInterface{
 
 	private int startAdress;

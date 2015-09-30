@@ -27,12 +27,12 @@ public class CPU implements CPUInterface
 	public final static int DUP		= 0x14;
 	public final static int POP		= 0x15;
 	
-	private IO ioSystem;
+	private IOInterface ioSystem;
 	private int PC;
-	private Memory32 programMemory;
+	private MemoryInterface programMemory;
 	private int opCode;
-	private Stack expStack;
-	private Stack callStack;
+	private StackInterface expStack;
+	private StackInterface callStack;
 	
 	private int value; //mot de 32bits
 	
@@ -195,25 +195,25 @@ public class CPU implements CPUInterface
 	}
 
 
-	public void wireToProgramMemory(Memory32 programMemory) {
+	public void wireToProgramMemory(MemoryInterface programMemory) {
 		this.programMemory = programMemory;
 	}
 
 
-	public void wireToExpStack(Stack expStack) {
+	public void wireToExpStack(StackInterface expStack) {
 		this.expStack = expStack;
 		
 	}
 
 
-	public void wireToCallStack(Stack callStack) {
+	public void wireToCallStack(StackInterface callStack) {
 		this.callStack = callStack;
 		// TODO Auto-generated method stub
 		
 	}
 
 
-	public void wireToIoSubsystem(IO ioSystem) {
+	public void wireToIoSubsystem(IOInterface ioSystem) {
 		this.ioSystem = ioSystem;
 		// TODO Auto-generated method stub
 		
