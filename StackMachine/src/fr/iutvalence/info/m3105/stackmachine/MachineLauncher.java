@@ -56,7 +56,7 @@ public class MachineLauncher
 
 		try
 		{
-			programMemory = new Memory32(0x00000000, 0x00000020);
+			programMemory = new Memory(0x00000000, 0x00000020);
 			expStack = new Stack(16);
 			callStack = new Stack(16);
 		}

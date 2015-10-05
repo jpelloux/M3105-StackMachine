@@ -1,16 +1,16 @@
 package fr.iutvalence.info.m3105.stackmachine;
 
-public interface MemoryInterface {
-		
-	public void setStartAdresse(int startAdresse);
+public interface MemoryInterface<T> {
 	
-	public int getEndAdresse();
+	public T getStartAddress();
+		
+	public void setStartAdress(T startAdress);
+	
+	public T getEndAdress();
 
-	public void setEndAdresse(int endAdresse);
+	public void setEndAdress(T endAdress);
 
-	public void write(int currentAddress, Object opCode);
+	public void write(T currentAddress, Object opCode);
 
 	public int read(int pC) throws AddressOutOfBoundsException;
-
-	public int getStartAddress();
 }

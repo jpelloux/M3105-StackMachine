@@ -3,7 +3,7 @@ package fr.iutvalence.info.m3105.stackmachine;
 public class Machine
 {
 	private CPUInterface cpu;
-	private MemoryInterface programMemory;
+	private MemoryInterface<Integer> programMemory;
 
 	public Machine(CPUInterface cpu, MemoryInterface programMemory, StackInterface expStack, StackInterface callStack, IOInterface ioSystem)
 	{
